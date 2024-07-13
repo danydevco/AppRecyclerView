@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
  *
  * @param items La lista de cadenas a mostrar.
  */
-class ItemAdapter(private val items: List<ContactModel>) : RecyclerView.Adapter<ItemViewHolder>() {
+class ItemAdapter(private val items: List<CarroModel>) : RecyclerView.Adapter<ItemViewHolder>() {
 
     /**
      * Se llama cuando el RecyclerView necesita un nuevo ViewHolder del tipo dado para representar un elemento.
@@ -21,7 +21,7 @@ class ItemAdapter(private val items: List<ContactModel>) : RecyclerView.Adapter<
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // Inflar el diseño del elemento y crear una nueva instancia de ViewHolder.
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item_layout, parent, false)
         return ItemViewHolder(view)
     }
 
@@ -36,8 +36,12 @@ class ItemAdapter(private val items: List<ContactModel>) : RecyclerView.Adapter<
         // Vincular los datos al ViewHolder.
         val item = items[position]
 
-        holder.textView.text = item.name
-        holder.tvTelf.text = item.telf.toString()
+        holder.tvMarca.text = item.marca
+        holder.tvPlaca.text = item.placa
+        holder.tvColor.text = item.color
+        holder.tvTipoCombustible.text = item.tipoCombustible
+
+
     }
 
     /**

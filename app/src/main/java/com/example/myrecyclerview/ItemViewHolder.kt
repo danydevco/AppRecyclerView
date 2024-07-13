@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.RecyclerView
  */
 class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    /**
-     * TextView para mostrar el texto del elemento.
-     */
-    val textView: TextView = itemView.findViewById(R.id.textView)
-    val tvTelf: TextView = itemView.findViewById(R.id.textViewTelf)
+    val tvMarca: TextView = itemView.findViewById(R.id.tvMarca)
+    val tvPlaca: TextView = itemView.findViewById(R.id.tvPlaca)
+    val tvColor: TextView = itemView.findViewById(R.id.tvColor)
+    val tvTipoCombustible: TextView = itemView.findViewById(R.id.tvTipoCombustible)
+
 }
